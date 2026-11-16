@@ -1,0 +1,88 @@
+site_name: 박하영 포트폴리오
+site_description: 박하영 (Ha-Young Park) — Robotics · AI Researcher 포트폴리오
+site_author: 박하영
+site_url: https://phy0916.github.io/portfolio/
+copyright: © 박하영 (Ha-Young Park)
+
+theme:
+  name: material
+  language: ko
+  font: false
+  icon:
+    logo: material/robot-industrial
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 어두운 화면으로
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 밝은 화면으로
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search:
+      lang:
+        - ko
+        - en
+
+markdown_extensions:
+  - tables
+  - attr_list
+  - md_in_html
+  - sane_lists
+  - toc:
+      permalink: true
+      toc_depth: 3
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.escapeall:
+      hardbreak: false
+      nbsp: false
+  - pymdownx.tilde:
+      subscript: false
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - 홈: index.md
+  - 실무 프로젝트 (KETI):
+      - AI-RAN: projects/01-ai-ran.md
+      - 휴머노이드 실증사업: projects/02-humanoid-demonstration.md
+      - 한국공대 프로젝트: projects/03-tukorea-pcb-platform.md
+      - KAIST-KAIROS: projects/04-kaist-kairos.md
+      - AI 팩토리: projects/05-ai-factory.md
+      - AI 챔피언 — AutoFactorySketch.AI: projects/06-ai-champion-autofactorysketch.md
+      - ASPEN 2025 — 다중 AMR 경로계획: projects/07-aspen-2025-dqn-multi-amr.md
+      - 첨단로봇: projects/08-advanced-robot.md
+      - 로봇장비: projects/09-robot-equipment.md
+      - 툴링 과제: projects/10-tooling.md
+  - 대학 · 연구 · 대외활동:
+      - 캡스톤 설계 — 3D 스캐닝: activities/01-capstone-3d-scanning.md
+      - 교환학생 — UCSB: activities/02-ucsb-exchange.md
+      - 학부연구생 — 마그네틱 로보틱스랩: activities/03-magnetic-robotics-lab.md
+      - 자율주행 해커톤 — 윷놀이 로봇: activities/04-autonomous-hackathon.md
+      - R-biz 챌린지: activities/05-rbiz-challenge.md
+      - 대외활동 — 로빛 동아리 · 봉사: activities/06-robit-club-volunteer.md

@@ -1,0 +1,26 @@
+/* 한글 본문 글꼴: 기기에 있는 글꼴을 사용 */
+:root {
+  --md-text-font: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, sans-serif;
+  --md-code-font: "D2Coding", "Cascadia Code", Consolas, "SF Mono", Menlo, monospace;
+}
+.md-typeset { word-break: keep-all; overflow-wrap: anywhere; }
+
+/* 노션 callout → 인용 블록을 안내 상자처럼 */
+.md-typeset blockquote {
+  border-left: .2rem solid var(--md-primary-fg-color);
+  background: var(--md-code-bg-color);
+  color: var(--md-default-fg-color);
+  border-radius: .2rem;
+  padding: .6rem .9rem;
+}
+.md-typeset blockquote > :first-child { margin-top: 0; }
+.md-typeset blockquote > :last-child { margin-bottom: 0; }
+
+/* 헤더가 빈 키–값 표는 헤더 줄을 숨김 */
+.md-typeset table:not([class]) thead tr:not(:has(th:not(:empty))) { display: none; }
+.md-typeset table:not([class]) { font-size: .72rem; }
+.md-typeset table:not([class]) th { white-space: nowrap; }
+.md-typeset table:not([class]) td:first-child { min-width: 8.6rem; }
+
+/* 이미지 */
+.md-typeset img { border-radius: .25rem; border: 1px solid var(--md-default-fg-color--lightest); }

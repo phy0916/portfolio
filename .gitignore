@@ -1,0 +1,6 @@
+site/
+__pycache__/
+.venv/
+Thumbs.db
+desktop.ini
+.DS_Store
